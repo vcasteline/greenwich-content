@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "shown": {
+      "type": "boolean"
+    },
+    "symbol": {
+      "type": "enumeration",
+      "enum": [
+        "alert",
+        "information"
+      ]
+    }
+  }
+}
