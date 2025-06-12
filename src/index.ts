@@ -16,5 +16,9 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  bootstrap: async ({ strapi }) => {
+    // Elimina todos los usuarios admin
+    await strapi.db.query('admin::user').deleteMany({});
+    strapi.log.info('¡Usuarios admin eliminados!');
+  },
 };
